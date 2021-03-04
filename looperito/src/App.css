@@ -1,0 +1,78 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("looperBG.png");
+  background-repeat: repeat-y;
+  background-color: rgba(256, 256, 256, 50);
+  align-content: center;
+}
+
+#pads-grip {
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 10px solid sienna;
+  border-radius: 5rem;
+  padding: 3em;
+  max-width: 600px;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+
+  /* grid-template-rows: repeat(3, 200px); */
+}
+
+#looper {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.pad {
+  cursor: pointer;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  text-align: center;
+  font-size: large;
+  animation: neon 0.08s ease-in-out infinite alternate;
+  border: 0.2em solid rgb(226, 41, 155);
+}
+
+.glow {
+  font-family: cursive;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: neon 0.08s ease-in-out infinite alternate;
+}
+
+.playbtn {
+  background-color: sienna;
+  border-radius: 3rem;
+  height: 50px;
+  width: 150px;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(228, 202, 226, 0.92),
+      0 0 30px rgba(228, 202, 222, 0.34), 0 0 12px rgba(242, 30, 207, 0.52),
+      0 0 21px rgba(242, 30, 189, 0.92), 0 0 34px rgba(242, 30, 154, 0.78),
+      0 0 54px rgba(242, 30, 178, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(228, 202, 226, 0.92),
+      0 0 30px rgba(228, 202, 222, 0.34), 0 0 12px rgba(242, 30, 207, 0.52),
+      0 0 22px rgba(242, 30, 189, 0.92), 0 0 38px rgba(242, 30, 154, 0.78),
+      0 0 60px rgba(242, 30, 178, 0.92);
+  }
+}
