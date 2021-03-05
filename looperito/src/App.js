@@ -46,7 +46,7 @@ const dataArray = [
   {
     src: "sounds/sound9.mp3",
     color: "#FF6E79",
-    name: "Wiki Wiki Wa Wa",
+    name: "Wiki Wiki Wa",
   },
 ];
 

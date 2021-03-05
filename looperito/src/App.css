@@ -1,8 +1,6 @@
 body,
 html {
   height: 100%;
-  margin: 0;
-  padding: 0;
   background-image: url("looperBG.png");
   background-repeat: repeat-y;
   align-content: center;
@@ -15,8 +13,10 @@ html {
   background-color: rgba(0, 0, 0, 0.7);
   border: 10px solid sienna;
   border-radius: 5rem;
-  padding: 3em;
-  max-width: 800px;
+  padding: 2em;
+  max-width: 600px;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .looper {
@@ -29,31 +29,93 @@ html {
 
 .pad {
   cursor: pointer;
-  width: 10em;
-  height: 10em;
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
-  margin: 0;
-  padding: 0;
   font-family: cursive;
   text-align: center;
-  font-size: large;
+  font-size: small;
   animation: neon 0.08s ease-in-out infinite alternate;
   border: 0.2em solid rgb(226, 41, 155);
 }
 
 .glow {
   font-family: cursive;
-  font-size: 80px;
   color: #fff;
   text-align: center;
   animation: neon 0.08s ease-in-out infinite alternate;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+.controlers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+}
+
 .playbtn {
   background-color: sienna;
   border-radius: 3rem;
-  height: 50px;
-  width: 150px;
+  height: 2em;
+  width: 5em;
+  padding: 0px;
+}
+
+#recordbtn {
+  width: 35px;
+  height: 35px;
+  font-size: 0;
+  background-color: rgb(224, 0, 30);
+  border-radius: 35px;
+}
+
+.rec {
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  outline: none;
+  border: 0;
+}
+
+.notrec {
+  background-color: rgb(224, 0, 30);
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+.timer {
+  background-color: sienna;
+  border-radius: 3rem;
+  height: 2em;
+  width: 5em;
+  text-align: center;
+  border: 2px solid black;
+  color: wheat;
+  font-size: large;
+  font-weight: bolder;
+  padding-top: 5px;
+  padding-bottom: 0;
+}
+
+@media (min-width: 400px) {
+  .pad {
+    width: 8em;
+    height: 8em;
+    font-size: large;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  .playbtn {
+    height: 50px;
+    width: 150px;
+  }
 }
 
 @keyframes neon {
@@ -68,5 +130,17 @@ html {
       0 0 30px rgba(228, 202, 222, 0.34), 0 0 12px rgba(242, 30, 207, 0.52),
       0 0 22px rgba(242, 30, 189, 0.92), 0 0 38px rgba(242, 30, 154, 0.78),
       0 0 60px rgba(242, 30, 178, 0.92);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 5px 0px rgba(173, 0, 0, 0.3);
+  }
+  65% {
+    box-shadow: 0px 0px 5px 13px rgba(228, 44, 44, 0.678);
+  }
+  90% {
+    box-shadow: 0px 0px 5px 13px rgb(224, 0, 30);
   }
 }
