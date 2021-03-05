@@ -5,14 +5,38 @@ import PauseCircleOutlineSharpIcon from "@material-ui/icons/PauseCircleOutlineSh
 import { Grid } from "@material-ui/core";
 import Timer from "./timer";
 import { useDispatch, useSelector } from "react-redux";
-import { resetRecord } from "../actions";
+import { changeDuration, resetRecord, resetTimer } from "../actions";
+import SessionSound from "./session";
 
 function Looper({ allSounds }) {
-  // const [activeSounds, setActiveSounds] = useState([]);
   const [playing, setPlaying] = useState(false);
   const [recording, setRecording] = useState(false);
+  const [playSession, setPS] = useState(false);
   const currSession = useSelector((state) => state.session);
+  const timer = useSelector((state) => state.time);
+  const duration = useSelector((state) => state.duration);
+
   const dispatch = useDispatch();
+  // Handle the play session button
+  function playSessionFunc() {
+    const playAudio = currSession.filter((sound) => sound.type === "start");
+    return playAudio.map((sound) => {
+      const stopSound = currSession.find(
+        (element) =>
+          element.src === sound.src &&
+          element.time >= sound.time &&
+          element.type === "stop"
+      );
+      return <SessionSound start={sound} stop={stopSound} />;
+    });
+  }
+  // Reset the clock when the session record end.
+  useEffect(() => {
+    if (timer === duration && timer !== 0) {
+      setPS(false);
+      dispatch(resetTimer());
+    }
+  }, [dispatch, duration, timer]);
 
   return (
     <div className="looper">
@@ -42,12 +66,23 @@ function Looper({ allSounds }) {
               }
               setRecording(!recording);
               setPlaying(!playing);
-              console.log(currSession);
+              console.log(timer);
+              dispatch(changeDuration(timer));
             }}
           >
             record
           </button>
-          <Timer recording={recording} />
+          <Timer recording={recording} playSession={playSession} />
+          {currSession.length && !recording ? (
+            <button
+              className="psbtn"
+              onClick={() => {
+                setPS(true);
+              }}
+            >
+              play session
+            </button>
+          ) : null}
         </div>
       </div>
       <div id={"pads-grid"}>
@@ -60,6 +95,7 @@ function Looper({ allSounds }) {
             ))}
         </Grid>
       </div>
+      {playSession && playSessionFunc()}
     </div>
   );
 }

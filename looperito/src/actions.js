@@ -23,3 +23,10 @@ export const resetRecord = () => {
     type: "RESET_RECORD",
   };
 };
+
+export const changeDuration = (duration) => {
+  return {
+    type: "DURATION",
+    payload: duration,
+  };
+};

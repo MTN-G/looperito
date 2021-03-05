@@ -1,6 +1,7 @@
 const initialState = {
   session: [],
   time: 0,
+  duration: 0,
 };
 
 function reducer(state = initialState, action) {
@@ -9,8 +10,12 @@ function reducer(state = initialState, action) {
       return { ...state, session: [...state.session, action.payload] };
     case "ADD_TIME":
       return { ...state, time: state.time + 1 };
+    case "RESET_TIMER":
+      return { ...state, time: 0 };
     case "RESET_RECORD":
-      return { time: 0, session: [] };
+      return { ...state, time: 0, session: [] };
+    case "DURATION":
+      return { ...state, duration: action.payload };
     default:
       return state;
   }

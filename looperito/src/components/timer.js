@@ -1,20 +1,22 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTime } from "../actions";
+import { addTime, resetTimer } from "../actions";
 
-function Timer({ recording }) {
+// This component use for time measure, both for display and for record info.
+function Timer({ recording, playSession }) {
   const dispatch = useDispatch();
   const timer = useSelector((state) => state.time);
-
   useEffect(() => {
-    if (recording) {
+    if (recording || playSession) {
+      dispatch(resetTimer());
       const timeInterval = setInterval(() => {
         dispatch(addTime());
       }, 1000);
       return () => clearInterval(timeInterval);
     }
-  }, [recording]);
+  }, [recording, playSession, dispatch]);
 
+  // Calculate time for displaying.
   function calcTime(number) {
     if (number >= 60) {
       let seconds = number % 60;
