@@ -1,23 +1,37 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { editSession } from "../actions";
 
-function Pad({ sound, activeSounds, setActiveSounds, playing }) {
+function Pad({ sound, playing, recording }) {
   const [active, setActive] = useState(false);
   const audioEl = useRef();
+  const dispatch = useDispatch();
+  const timer = useSelector((state) => state.time);
   const handleChange = useCallback(() => {
     if (active && playing) {
-      // setActiveSounds([...activeSounds, sound]);
-      // console.log("added");
+      if (recording) {
+        dispatch(
+          editSession({
+            src: sound.src,
+            time: timer,
+            type: "start",
+          })
+        );
+      }
       audioEl.current.play();
     } else {
-      // console.log("removed");
-      //   const activeSoundIndex = activeSounds.findIndex(
-      //     (element) => element === sound
-      //   );
-      //   activeSounds.splice(activeSoundIndex, 1);
-      //   setActiveSounds(activeSounds);
+      if (recording && timer > 0) {
+        dispatch(
+          editSession({
+            src: sound.src,
+            time: timer,
+            type: "stop",
+          })
+        );
+      }
       audioEl.current.pause();
     }
-  }, [playing, active]);
+  }, [playing, active, recording]);
 
   useEffect(() => {
     handleChange();

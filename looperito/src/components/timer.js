@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTime } from "../actions";
 
 function Timer({ recording }) {
-  const [time, setTime] = useState(0);
+  const dispatch = useDispatch();
+  const timer = useSelector((state) => state.time);
 
   useEffect(() => {
     if (recording) {
-      setTime(0);
       const timeInterval = setInterval(() => {
-        setTime((time) => time + 1);
+        dispatch(addTime());
       }, 1000);
       return () => clearInterval(timeInterval);
     }
@@ -25,7 +27,7 @@ function Timer({ recording }) {
     }
   }
 
-  return <div className="timer">{time === 0 ? "00:00" : calcTime(time)}</div>;
+  return <div className="timer">{timer === 0 ? "00:00" : calcTime(timer)}</div>;
 }
 
 export default Timer;
