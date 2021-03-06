@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/looperito/static/css/main.6f7c0216.chunk.css",
+    "main.js": "/looperito/static/js/main.af4ead89.chunk.js",
+    "main.js.map": "/looperito/static/js/main.af4ead89.chunk.js.map",
+    "runtime-main.js": "/looperito/static/js/runtime-main.1f7fe639.js",
+    "runtime-main.js.map": "/looperito/static/js/runtime-main.1f7fe639.js.map",
+    "static/js/2.e46c250c.chunk.js": "/looperito/static/js/2.e46c250c.chunk.js",
+    "static/js/2.e46c250c.chunk.js.map": "/looperito/static/js/2.e46c250c.chunk.js.map",
+    "static/js/3.33f07b05.chunk.js": "/looperito/static/js/3.33f07b05.chunk.js",
+    "static/js/3.33f07b05.chunk.js.map": "/looperito/static/js/3.33f07b05.chunk.js.map",
+    "index.html": "/looperito/index.html",
+    "static/css/main.6f7c0216.chunk.css.map": "/looperito/static/css/main.6f7c0216.chunk.css.map",
+    "static/js/2.e46c250c.chunk.js.LICENSE.txt": "/looperito/static/js/2.e46c250c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/looperito/static/media/looperBG.199799ea.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1f7fe639.js",
+    "static/js/2.e46c250c.chunk.js",
+    "static/css/main.6f7c0216.chunk.css",
+    "static/js/main.af4ead89.chunk.js"
+  ]
+}
