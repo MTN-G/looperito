@@ -8,7 +8,56 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeDuration, resetRecord, resetTimer } from "../actions";
 import SessionSound from "./session";
 
-function Looper({ allSounds }) {
+// all soundfiles path & name
+const allSounds = [
+  {
+    src: "sounds/sound1.mp3",
+    color: "#88A09E",
+    name: "Silent Star",
+  },
+  {
+    src: "sounds/sound2.mp3",
+    color: "#D78784",
+    name: "Basic Drums",
+  },
+  {
+    src: "sounds/sound3.mp3",
+    color: "#6F9B81",
+    name: "Aliens",
+  },
+  {
+    src: "sounds/sound4.mp3",
+    color: "#72D8FE",
+    name: "Darbuka",
+  },
+  {
+    src: "sounds/sound5.mp3",
+    color: "#725AC1",
+    name: "Strong Drums",
+  },
+  {
+    src: "sounds/sound6.mp3",
+    color: "#5A6650",
+    name: "Wild West",
+  },
+  {
+    src: "sounds/sound7.mp3",
+    color: "#0776C5",
+    name: "Comedy",
+  },
+  {
+    src: "sounds/sound8.mp3",
+    color: "#C372D5",
+    name: "Tik-Tak",
+  },
+  {
+    src: "sounds/sound9.mp3",
+    color: "#2BCA7A",
+    name: "Wiki Wiki Wa",
+  },
+];
+
+function Looper() {
   const [playing, setPlaying] = useState(false);
   const [recording, setRecording] = useState(false);
   const [playSession, setPS] = useState(false);

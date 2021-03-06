@@ -7,6 +7,8 @@ const initialState = {
 function reducer(state = initialState, action) {
   switch (action.type) {
     case "EDIT_SESSION":
+      // Session is the state of the last recorded session, represented
+      // by array of action (play/pause a sound)
       return { ...state, session: [...state.session, action.payload] };
     case "ADD_TIME":
       return { ...state, time: state.time + 1 };
