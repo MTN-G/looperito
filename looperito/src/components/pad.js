@@ -20,6 +20,7 @@ function Pad({ sound, playing, recording }) {
           })
         );
       }
+      audioEl.current.currentTime = 0;
       audioEl.current.play();
     } else {
       if (recording && timer > 0) {
@@ -33,6 +34,7 @@ function Pad({ sound, playing, recording }) {
       }
       audioEl.current.pause();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playing, active, recording]);
 
   return (
@@ -42,7 +44,7 @@ function Pad({ sound, playing, recording }) {
       onClick={() => setActive(!active)}
     >
       {sound.name}
-      <audio ref={audioEl} src={sound.src} loop></audio>
+      <audio ref={audioEl} src={sound.src} crossOrigin="anonymous" loop></audio>
     </button>
   );
 }
