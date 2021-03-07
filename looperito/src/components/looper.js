@@ -66,7 +66,9 @@ function Looper() {
                 dispatch(resetRecord());
               }
               setRecording(!recording);
-              setPlaying(!playing);
+              if (!playing) {
+                setPlaying(!playing);
+              }
               dispatch(changeDuration(timer));
             }}
           >
