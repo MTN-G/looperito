@@ -1,23 +1,32 @@
 {
   "files": {
-    "main.css": "/looperito/static/css/main.6f7c0216.chunk.css",
-    "main.js": "/looperito/static/js/main.af4ead89.chunk.js",
-    "main.js.map": "/looperito/static/js/main.af4ead89.chunk.js.map",
-    "runtime-main.js": "/looperito/static/js/runtime-main.1f7fe639.js",
-    "runtime-main.js.map": "/looperito/static/js/runtime-main.1f7fe639.js.map",
-    "static/js/2.e46c250c.chunk.js": "/looperito/static/js/2.e46c250c.chunk.js",
-    "static/js/2.e46c250c.chunk.js.map": "/looperito/static/js/2.e46c250c.chunk.js.map",
-    "static/js/3.33f07b05.chunk.js": "/looperito/static/js/3.33f07b05.chunk.js",
-    "static/js/3.33f07b05.chunk.js.map": "/looperito/static/js/3.33f07b05.chunk.js.map",
+    "main.css": "/looperito/static/css/main.251e5e74.chunk.css",
+    "main.js": "/looperito/static/js/main.b9bba827.chunk.js",
+    "main.js.map": "/looperito/static/js/main.b9bba827.chunk.js.map",
+    "runtime-main.js": "/looperito/static/js/runtime-main.b2a2e8ad.js",
+    "runtime-main.js.map": "/looperito/static/js/runtime-main.b2a2e8ad.js.map",
+    "static/js/2.9bb89337.chunk.js": "/looperito/static/js/2.9bb89337.chunk.js",
+    "static/js/2.9bb89337.chunk.js.map": "/looperito/static/js/2.9bb89337.chunk.js.map",
+    "static/js/3.34c130a5.chunk.js": "/looperito/static/js/3.34c130a5.chunk.js",
+    "static/js/3.34c130a5.chunk.js.map": "/looperito/static/js/3.34c130a5.chunk.js.map",
     "index.html": "/looperito/index.html",
-    "static/css/main.6f7c0216.chunk.css.map": "/looperito/static/css/main.6f7c0216.chunk.css.map",
-    "static/js/2.e46c250c.chunk.js.LICENSE.txt": "/looperito/static/js/2.e46c250c.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/looperito/static/media/looperBG.199799ea.png"
+    "static/css/main.251e5e74.chunk.css.map": "/looperito/static/css/main.251e5e74.chunk.css.map",
+    "static/js/2.9bb89337.chunk.js.LICENSE.txt": "/looperito/static/js/2.9bb89337.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/looperito/static/media/looperBG.199799ea.png",
+    "static/media/sound1.f2d668af.mp3": "/looperito/static/media/sound1.f2d668af.mp3",
+    "static/media/sound2.f77c6da4.mp3": "/looperito/static/media/sound2.f77c6da4.mp3",
+    "static/media/sound3.2d08c654.mp3": "/looperito/static/media/sound3.2d08c654.mp3",
+    "static/media/sound4.3e1411b4.mp3": "/looperito/static/media/sound4.3e1411b4.mp3",
+    "static/media/sound5.27bdc145.mp3": "/looperito/static/media/sound5.27bdc145.mp3",
+    "static/media/sound6.230fcab8.mp3": "/looperito/static/media/sound6.230fcab8.mp3",
+    "static/media/sound7.52c24c81.mp3": "/looperito/static/media/sound7.52c24c81.mp3",
+    "static/media/sound8.37c82282.mp3": "/looperito/static/media/sound8.37c82282.mp3",
+    "static/media/sound9.5eb417fc.mp3": "/looperito/static/media/sound9.5eb417fc.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.1f7fe639.js",
-    "static/js/2.e46c250c.chunk.js",
-    "static/css/main.6f7c0216.chunk.css",
-    "static/js/main.af4ead89.chunk.js"
+    "static/js/runtime-main.b2a2e8ad.js",
+    "static/js/2.9bb89337.chunk.js",
+    "static/css/main.251e5e74.chunk.css",
+    "static/js/main.b9bba827.chunk.js"
   ]
 }
